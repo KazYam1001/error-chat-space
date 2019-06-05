@@ -17,10 +17,7 @@ $(document).on('turbolinks:load', function() {
     const latestId = $('.message:last').data('message_id') || 0;
     $.ajax({
       url: `/groups/${groupId}/api/messages`,
-      data: {
-        latest_id: latestId,
-        group_id:  groupId
-      },
+      data: { latest_id: latestId },
       dataType: 'json'
     })
     .done(function(newMessages) {
