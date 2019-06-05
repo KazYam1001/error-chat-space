@@ -25,7 +25,7 @@ $(document).on('turbolinks:load', function() {
 
   const userList = $('#user-search-result'); // 検索結果表示欄
 
-  $('#user-search-field').on('input', (e)=> {
+  $('#user-search-field').on('input', ()=> {
     userList.empty();
     let userIds = []; // 検索から除くuser
     $('.js-chat-member').each((index, el)=> userIds.push(el.dataset.id)); // 追加されたメンバーのidをuserIdsにpush
