@@ -58,7 +58,7 @@ $(document).on('turbolinks:load', function() {
       contentType: false
     })
     .done(function(message) {
-      if (message.content == "" && message.image == null) {
+      if (message.id == null) {
         alert('メッセージを入力して下さい');
       } else {
         $('#new_message')[0].reset();
